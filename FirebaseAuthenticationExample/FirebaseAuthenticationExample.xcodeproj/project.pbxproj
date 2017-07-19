@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C15D22C71F1F9BF400E4ED79 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */; };
+		C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */; };
 		C1FEBA1E1F1E434F00A89B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */; };
 		C1FEBA201F1E434F00A89B59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FEBA1F1F1E434F00A89B59 /* ViewController.swift */; };
 		C1FEBA231F1E434F00A89B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FEBA211F1E434F00A89B59 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C1FEBA1A1F1E434F00A89B59 /* FirebaseAuthenticationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthenticationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1FEBA1F1F1E434F00A89B59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C15D22C51F1F9BCA00E4ED79 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */,
+				C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C1FEBA111F1E434E00A89B59 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +67,7 @@
 		C1FEBA1C1F1E434F00A89B59 /* FirebaseAuthenticationExample */ = {
 			isa = PBXGroup;
 			children = (
+				C15D22C51F1F9BCA00E4ED79 /* Views */,
 				C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */,
 				C1FEBA1F1F1E434F00A89B59 /* ViewController.swift */,
 				C1FEBA211F1E434F00A89B59 /* Main.storyboard */,
@@ -137,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */,
 				C1FEBA201F1E434F00A89B59 /* ViewController.swift in Sources */,
 				C1FEBA1E1F1E434F00A89B59 /* AppDelegate.swift in Sources */,
+				C15D22C71F1F9BF400E4ED79 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +318,7 @@
 				C1FEBA2E1F1E434F00A89B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
