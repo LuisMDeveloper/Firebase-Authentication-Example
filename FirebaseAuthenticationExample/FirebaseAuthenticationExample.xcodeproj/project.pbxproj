@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		C15D22C71F1F9BF400E4ED79 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */; };
 		C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */; };
+		C1C7914C1F20F8E00032FBCB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7914B1F20F8E00032FBCB /* LoginVC.swift */; };
 		C1FEBA1E1F1E434F00A89B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */; };
-		C1FEBA201F1E434F00A89B59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FEBA1F1F1E434F00A89B59 /* ViewController.swift */; };
 		C1FEBA231F1E434F00A89B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FEBA211F1E434F00A89B59 /* Main.storyboard */; };
 		C1FEBA251F1E434F00A89B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1FEBA241F1E434F00A89B59 /* Assets.xcassets */; };
 		C1FEBA281F1E434F00A89B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FEBA261F1E434F00A89B59 /* LaunchScreen.storyboard */; };
@@ -19,9 +19,9 @@
 /* Begin PBXFileReference section */
 		C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		C1C7914B1F20F8E00032FBCB /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C1FEBA1A1F1E434F00A89B59 /* FirebaseAuthenticationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthenticationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C1FEBA1F1F1E434F00A89B59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C1FEBA221F1E434F00A89B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1FEBA241F1E434F00A89B59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1FEBA271F1E434F00A89B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +48,14 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		C1C7914D1F20F8E50032FBCB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1C7914B1F20F8E00032FBCB /* LoginVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		C1FEBA111F1E434E00A89B59 = {
 			isa = PBXGroup;
 			children = (
@@ -68,8 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				C15D22C51F1F9BCA00E4ED79 /* Views */,
+				C1C7914D1F20F8E50032FBCB /* Controllers */,
 				C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */,
-				C1FEBA1F1F1E434F00A89B59 /* ViewController.swift */,
 				C1FEBA211F1E434F00A89B59 /* Main.storyboard */,
 				C1FEBA241F1E434F00A89B59 /* Assets.xcassets */,
 				C1FEBA261F1E434F00A89B59 /* LaunchScreen.storyboard */,
@@ -152,9 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */,
-				C1FEBA201F1E434F00A89B59 /* ViewController.swift in Sources */,
 				C1FEBA1E1F1E434F00A89B59 /* AppDelegate.swift in Sources */,
 				C15D22C71F1F9BF400E4ED79 /* CustomTextField.swift in Sources */,
+				C1C7914C1F20F8E00032FBCB /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
