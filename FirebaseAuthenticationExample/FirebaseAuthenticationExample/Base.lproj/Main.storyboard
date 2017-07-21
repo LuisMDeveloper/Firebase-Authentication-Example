@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ji4-YQ-hG5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -175,6 +176,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="fUb-LY-1ee">
+            <objects>
+                <viewController id="Ji4-YQ-hG5" customClass="MainVC" customModule="FirebaseAuthenticationExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JTV-Wj-CIu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rlk-P8-YCn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZeQ-cZ-jTy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNS-dr-cCN">
+                                <rect key="frame" x="37.5" y="321.5" width="300" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="xXr-Y2-bc9"/>
+                                    <constraint firstAttribute="height" constant="24" id="yCf-8F-Fo6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5g-ZW-KtE" customClass="CustomButton" customModule="FirebaseAuthenticationExample" customModuleProvider="target">
+                                <rect key="frame" x="61" y="567" width="253" height="50"/>
+                                <color key="backgroundColor" red="0.93715304136276245" green="0.93731355667114258" blue="0.93714290857315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jnU-vQ-fjT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.35682046413421631" green="0.3568871021270752" blue="0.35681626200675964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="Ji4-YQ-hG5" eventType="touchUpInside" id="eLz-mW-FYJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35682046413421631" green="0.3568871021270752" blue="0.35681626200675964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WNS-dr-cCN" firstAttribute="centerX" secondItem="ZeQ-cZ-jTy" secondAttribute="centerX" id="X8V-Gc-f1N"/>
+                            <constraint firstItem="R5g-ZW-KtE" firstAttribute="leading" secondItem="ZeQ-cZ-jTy" secondAttribute="leadingMargin" constant="45" id="YIa-pk-u3H"/>
+                            <constraint firstItem="WNS-dr-cCN" firstAttribute="centerY" secondItem="ZeQ-cZ-jTy" secondAttribute="centerY" id="x3z-BI-jIX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R5g-ZW-KtE" secondAttribute="trailing" constant="45" id="xKr-pg-RVl"/>
+                            <constraint firstItem="Rlk-P8-YCn" firstAttribute="top" secondItem="R5g-ZW-KtE" secondAttribute="bottom" constant="50" id="xQF-mc-3Xq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userLbl" destination="WNS-dr-cCN" id="CmN-QU-3eM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="LoginVC" id="CeW-OK-ReJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgV-OA-cpU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778.39999999999998" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

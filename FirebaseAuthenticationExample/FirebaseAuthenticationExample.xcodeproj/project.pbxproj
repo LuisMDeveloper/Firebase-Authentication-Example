@@ -12,6 +12,8 @@
 		C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */; };
 		C1C7914C1F20F8E00032FBCB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7914B1F20F8E00032FBCB /* LoginVC.swift */; };
 		C1E420C41F21872500884E49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1E420C31F21872500884E49 /* GoogleService-Info.plist */; };
+		C1E420C71F218E6800884E49 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E420C61F218E6800884E49 /* AuthService.swift */; };
+		C1E420C91F21926200884E49 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E420C81F21926200884E49 /* MainVC.swift */; };
 		C1FEBA1E1F1E434F00A89B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */; };
 		C1FEBA231F1E434F00A89B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FEBA211F1E434F00A89B59 /* Main.storyboard */; };
 		C1FEBA251F1E434F00A89B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1FEBA241F1E434F00A89B59 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C1C7914B1F20F8E00032FBCB /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C1E420C31F21872500884E49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C1E420C61F218E6800884E49 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C1E420C81F21926200884E49 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C1FEBA1A1F1E434F00A89B59 /* FirebaseAuthenticationExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAuthenticationExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1FEBA221F1E434F00A89B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,8 +80,17 @@
 			isa = PBXGroup;
 			children = (
 				C1C7914B1F20F8E00032FBCB /* LoginVC.swift */,
+				C1E420C81F21926200884E49 /* MainVC.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C1E420C51F218E0500884E49 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C1E420C61F218E6800884E49 /* AuthService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		C1FEBA111F1E434E00A89B59 = {
@@ -101,6 +114,7 @@
 		C1FEBA1C1F1E434F00A89B59 /* FirebaseAuthenticationExample */ = {
 			isa = PBXGroup;
 			children = (
+				C1E420C51F218E0500884E49 /* Services */,
 				C15D22C51F1F9BCA00E4ED79 /* Views */,
 				C1C7914D1F20F8E50032FBCB /* Controllers */,
 				C1FEBA1D1F1E434F00A89B59 /* AppDelegate.swift */,
@@ -239,7 +253,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */,
+				C1E420C91F21926200884E49 /* MainVC.swift in Sources */,
 				C1FEBA1E1F1E434F00A89B59 /* AppDelegate.swift in Sources */,
+				C1E420C71F218E6800884E49 /* AuthService.swift in Sources */,
 				C15D22C71F1F9BF400E4ED79 /* CustomTextField.swift in Sources */,
 				C1C7914C1F20F8E00032FBCB /* LoginVC.swift in Sources */,
 			);

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginVC: UIViewController {
     
@@ -45,11 +46,27 @@ class LoginVC: UIViewController {
     @IBAction func SingUpLoginButton(_ sender: Any) {
         if let email = emailTF.text, let password = passwordTF.text, (email.characters.count > 0 && password.characters.count > 0) {
             
+            if (loginMode) {
+                AuthService.instance.login(with: email, and: password, onComplete: onAuthComplete)
+            } else {
+                AuthService.instance.singup(with: email, and: password, onComplete: onAuthComplete)
+            }
         } else {
             let alert = UIAlertController(title: "Email and Password Required", message: "You must enter both email and password", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
         }
+    }
+    
+    func onAuthComplete(_ errMsg: String?, _ data: Any?) -> Void {
+        guard errMsg == nil else {
+            let authAlert = UIAlertController(title: "Error Authentication", message: errMsg, preferredStyle: .alert)
+            authAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(authAlert, animated: true, completion: nil)
+            return
+        }
+        print("\(Auth.auth().currentUser?.email)")
+        self.dismiss(animated: true, completion: nil)
     }
 
 }
