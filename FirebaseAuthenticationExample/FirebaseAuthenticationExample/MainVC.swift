@@ -27,7 +27,8 @@ class MainVC: UIViewController {
             return
         }
         
-        userLbl.text = Auth.auth().currentUser?.email
+        let currentUser = Auth.auth().currentUser
+        userLbl.text = "DisplayName: \(currentUser?.displayName ?? "No displayName")\nEmail: \(currentUser?.email ?? "No email")\nPhoneNumber: \(currentUser?.phoneNumber ?? "No phoneNumber")\nPhotoURL: \(currentUser?.photoURL?.absoluteString ?? "No photoURL")\nUID: \(currentUser?.uid ?? "No uid")\n"
     }
     
     @IBAction func signOutPressed(_ sender: Any) {
