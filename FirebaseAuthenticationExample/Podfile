@@ -8,5 +8,7 @@ target 'FirebaseAuthenticationExample' do
   # Pods for FirebaseAuthenticationExample
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
 
 end

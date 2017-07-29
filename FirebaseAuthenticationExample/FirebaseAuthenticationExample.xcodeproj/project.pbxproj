@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		072E0DDB4E85491EFC75A4D4 /* Pods_FirebaseAuthenticationExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D28EF4D19152BA1C8AF2F66B /* Pods_FirebaseAuthenticationExample.framework */; };
+		C149F1CB1F2A25FB007EA436 /* SocialLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149F1CA1F2A25FB007EA436 /* SocialLoginVC.swift */; };
+		C149F1CD1F2A2B2E007EA436 /* CustomButtonWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C149F1CC1F2A2B2E007EA436 /* CustomButtonWithIcon.swift */; };
 		C15D22C71F1F9BF400E4ED79 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */; };
 		C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */; };
 		C1C7914C1F20F8E00032FBCB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C7914B1F20F8E00032FBCB /* LoginVC.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		2073285FC6098E519A8B3D3C /* Pods-FirebaseAuthenticationExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthenticationExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseAuthenticationExample/Pods-FirebaseAuthenticationExample.release.xcconfig"; sourceTree = "<group>"; };
 		3CA5EA44A5325BAD84EA3052 /* Pods-FirebaseAuthenticationExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseAuthenticationExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseAuthenticationExample/Pods-FirebaseAuthenticationExample.debug.xcconfig"; sourceTree = "<group>"; };
+		C149F1CA1F2A25FB007EA436 /* SocialLoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialLoginVC.swift; sourceTree = "<group>"; };
+		C149F1CC1F2A2B2E007EA436 /* CustomButtonWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonWithIcon.swift; sourceTree = "<group>"; };
 		C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C1C7914B1F20F8E00032FBCB /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			children = (
 				C15D22C61F1F9BF400E4ED79 /* CustomTextField.swift */,
 				C15D22C81F1F9C9600E4ED79 /* CustomButton.swift */,
+				C149F1CC1F2A2B2E007EA436 /* CustomButtonWithIcon.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 			children = (
 				C1C7914B1F20F8E00032FBCB /* LoginVC.swift */,
 				C1E420C81F21926200884E49 /* MainVC.swift */,
+				C149F1CA1F2A25FB007EA436 /* SocialLoginVC.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -253,10 +259,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C15D22C91F1F9C9600E4ED79 /* CustomButton.swift in Sources */,
+				C149F1CD1F2A2B2E007EA436 /* CustomButtonWithIcon.swift in Sources */,
 				C1E420C91F21926200884E49 /* MainVC.swift in Sources */,
 				C1FEBA1E1F1E434F00A89B59 /* AppDelegate.swift in Sources */,
 				C1E420C71F218E6800884E49 /* AuthService.swift in Sources */,
 				C15D22C71F1F9BF400E4ED79 /* CustomTextField.swift in Sources */,
+				C149F1CB1F2A25FB007EA436 /* SocialLoginVC.swift in Sources */,
 				C1C7914C1F20F8E00032FBCB /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
