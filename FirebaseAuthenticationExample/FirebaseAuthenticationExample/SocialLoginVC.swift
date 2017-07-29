@@ -24,33 +24,30 @@ class SocialLoginVC: UIViewController {
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (userResult, error) in
             if error != nil {
                 print("Unable to authenticate with facebook - \(String(describing: error).debugDescription)")
+                self.alertError("Unable to authenticate with facebook")
             } else if userResult?.isCancelled == true {
-                print("User cancel facebook authentication")
+                self.alertError("User cancel facebook authentication")
             } else {
                 print("Successfully authenticated with facebook")
                 let credentials = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.firebaseAuth(credentials)
+                AuthService.instance.login(with: credentials, onComplete: self.onAuthComplete)
             }
             
         }
     }
-    
-    func firebaseAuth(_ credential: AuthCredential) {
-        Auth.auth().signIn(with: credential, completion: { (user, error) in
-            if error != nil {
-                print("Unable to authenticate with Firebase - \(String(describing: error).debugDescription)")
-            } else {
-                print("Successfully authenticated with Firebase")
-                if let user = user {
-                    let userData = ["provider": credential.provider]
-                    self.completeSignIn(id: user.uid, userData: userData)
-                }
-            }
-        })
+
+    func onAuthComplete(_ errMsg: String?, _ data: Any?) -> Void {
+        guard errMsg == nil else {
+            alertError(errMsg)
+            return
+        }
+        self.dismiss(animated: true, completion: nil)
     }
     
-    func completeSignIn(id: String, userData: Dictionary<String, String>) {
-        self.dismiss(animated: true, completion: nil)
+    func alertError(_ errMsg: String?) {
+        let authAlert = UIAlertController(title: "Error Authentication", message: errMsg, preferredStyle: .alert)
+        authAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(authAlert, animated: true, completion: nil)
     }
 
 }

@@ -30,6 +30,18 @@ class AuthService {
         }
     }
     
+    func login(with credential: AuthCredential, onComplete: Completion?) {
+        Auth.auth().signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+                self.handleFirebaseError(error: error! as NSError, onComplete: onComplete)
+            } else {
+                if let user = user {
+                    onComplete?(nil, user)
+                }
+            }
+        })
+    }
+    
     func singup(with email: String, and password: String, onComplete: Completion?) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             

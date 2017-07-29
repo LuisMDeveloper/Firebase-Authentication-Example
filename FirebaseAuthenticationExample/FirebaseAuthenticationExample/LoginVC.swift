@@ -66,7 +66,6 @@ class LoginVC: UIViewController {
             return
         }
         print("\(Auth.auth().currentUser?.email)")
-        //self.dismiss(animated: true, completion: nil)
         self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
 
