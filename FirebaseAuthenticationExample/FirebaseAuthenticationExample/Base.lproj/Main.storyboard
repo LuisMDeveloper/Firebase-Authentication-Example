@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jcf-64-690">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ji4-YQ-hG5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -175,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="114" y="865"/>
         </scene>
         <!--Social LoginVC-->
         <scene sceneID="cca-Y6-NZI">
@@ -219,6 +219,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="xcH-jy-X43"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHb-AL-chc" customClass="CustomButtonWithIcon" customModule="FirebaseAuthenticationExample" customModuleProvider="target">
                                 <rect key="frame" x="45" y="359" width="285" height="50"/>
@@ -235,6 +238,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="facebookLoginBtnPressed:" destination="jcf-64-690" eventType="touchUpInside" id="ui6-DN-ViN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpN-GB-plH" customClass="CustomButtonWithIcon" customModule="FirebaseAuthenticationExample" customModuleProvider="target">
                                 <rect key="frame" x="45" y="434" width="285" height="50"/>
@@ -298,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aX4-K4-IKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="864"/>
+            <point key="canvasLocation" x="-778" y="865"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="fUb-LY-1ee">
@@ -352,7 +358,7 @@
                     </view>
                     <connections>
                         <outlet property="userLbl" destination="WNS-dr-cCN" id="CmN-QU-3eM"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="LoginVC" id="CeW-OK-ReJ"/>
+                        <segue destination="jcf-64-690" kind="show" identifier="SocialLoginVC" id="nBa-gH-FjZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgV-OA-cpU" userLabel="First Responder" sceneMemberID="firstResponder"/>

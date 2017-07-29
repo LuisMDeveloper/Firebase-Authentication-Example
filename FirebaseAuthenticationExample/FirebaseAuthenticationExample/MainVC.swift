@@ -23,7 +23,7 @@ class MainVC: UIViewController {
         
         
         guard Auth.auth().currentUser != nil else {
-            performSegue(withIdentifier: "LoginVC", sender: nil)
+            performSegue(withIdentifier: "SocialLoginVC", sender: nil)
             return
         }
         
@@ -34,7 +34,7 @@ class MainVC: UIViewController {
     @IBAction func signOutPressed(_ sender: Any) {
         do {
             try Auth.auth().signOut()
-            performSegue(withIdentifier: "LoginVC", sender: nil)
+            performSegue(withIdentifier: "SocialLoginVC", sender: nil)
         } catch {
             
         }
