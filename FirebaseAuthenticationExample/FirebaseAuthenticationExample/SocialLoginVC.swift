@@ -10,30 +10,49 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleSignIn
 
-class SocialLoginVC: UIViewController {
+class SocialLoginVC: UIViewController, GIDSignInUIDelegate {
+
+    enum AuthProvider {
+        case authEmail
+        case authFacebook
+        case authGoogle
+    }
+
+    func auth(with provider: AuthProvider) {
+        switch provider {
+        case .authEmail:
+            self.performSegue(withIdentifier: "email", sender: nil)
+        case .authFacebook:
+            let loginManager = FBSDKLoginManager()
+            loginManager.logIn(withReadPermissions: ["email"], from: self, handler: { (result, error) in
+                if let error = error {
+                    print(error.localizedDescription);
+                    self.alertError("Unable to authenticate with facebook")
+                } else if result!.isCancelled {
+                    self.alertError("User cancel facebook authentication")
+                } else {
+                    let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                    AuthService.instance.login(with: credential, onComplete: self.onAuthComplete)
+                }
+            })
+        case .authGoogle:
+            GIDSignIn.sharedInstance().uiDelegate = self
+            GIDSignIn.sharedInstance().signIn()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
+
     @IBAction func facebookLoginBtnPressed(_ sender: Any) {
-        let facebookLogin = FBSDKLoginManager()
-        
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (userResult, error) in
-            if error != nil {
-                print("Unable to authenticate with facebook - \(String(describing: error).debugDescription)")
-                self.alertError("Unable to authenticate with facebook")
-            } else if userResult?.isCancelled == true {
-                self.alertError("User cancel facebook authentication")
-            } else {
-                print("Successfully authenticated with facebook")
-                let credentials = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                AuthService.instance.login(with: credentials, onComplete: self.onAuthComplete)
-            }
-            
-        }
+        self.auth(with: .authFacebook)
+    }
+
+    @IBAction func googleLoginBtnPressed(_ sender: Any) {
+        self.auth(with: .authGoogle)
     }
 
     func onAuthComplete(_ errMsg: String?, _ data: Any?) -> Void {
@@ -43,7 +62,7 @@ class SocialLoginVC: UIViewController {
         }
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     func alertError(_ errMsg: String?) {
         let authAlert = UIAlertController(title: "Error Authentication", message: errMsg, preferredStyle: .alert)
         authAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
