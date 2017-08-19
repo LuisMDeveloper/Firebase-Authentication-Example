@@ -13,7 +13,7 @@ import FBSDKLoginKit
 
 class SocialLoginVC: UIViewController {
 
-    enum AuthProvider {
+        enum AuthProvider {
         case authEmail
         case authFacebook
     }

@@ -10,5 +10,6 @@ target 'FirebaseAuthenticationExample' do
   pod 'Firebase/Auth'
   pod 'FacebookCore'
   pod 'FacebookLogin'
+  pod 'GoogleSignIn'
 
 end
