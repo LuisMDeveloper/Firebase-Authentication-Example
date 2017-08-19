@@ -10,12 +10,14 @@ import UIKit
 import Firebase
 import FBSDKCoreKit
 import FBSDKLoginKit
+import GoogleSignIn
 
-class SocialLoginVC: UIViewController {
+class SocialLoginVC: UIViewController, GIDSignInUIDelegate {
 
-        enum AuthProvider {
+    enum AuthProvider {
         case authEmail
         case authFacebook
+        case authGoogle
     }
 
     func auth(with provider: AuthProvider) {
@@ -35,6 +37,9 @@ class SocialLoginVC: UIViewController {
                     AuthService.instance.login(with: credential, onComplete: self.onAuthComplete)
                 }
             })
+        case .authGoogle:
+            GIDSignIn.sharedInstance().uiDelegate = self
+            GIDSignIn.sharedInstance().signIn()
         }
     }
 
@@ -44,6 +49,10 @@ class SocialLoginVC: UIViewController {
 
     @IBAction func facebookLoginBtnPressed(_ sender: Any) {
         self.auth(with: .authFacebook)
+    }
+
+    @IBAction func googleLoginBtnPressed(_ sender: Any) {
+        self.auth(with: .authGoogle)
     }
 
     func onAuthComplete(_ errMsg: String?, _ data: Any?) -> Void {

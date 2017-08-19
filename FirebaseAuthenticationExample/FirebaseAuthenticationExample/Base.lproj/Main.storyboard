@@ -257,6 +257,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="googleLoginBtnPressed:" destination="jcf-64-690" eventType="touchUpInside" id="6of-3k-SC4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHb-Bi-rtf" customClass="CustomButtonWithIcon" customModule="FirebaseAuthenticationExample" customModuleProvider="target">
                                 <rect key="frame" x="45" y="509" width="285" height="50"/>
